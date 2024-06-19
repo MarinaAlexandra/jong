@@ -7,6 +7,8 @@
   --text-rgb: 5, 18, 44;
   --active-rgb: 93, 39, 218;
   --background-shadow: 93, 39, 218, 0.5;
+  --border-color:  5, 18, 44;
+  --button-text: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +17,8 @@
     --text-rgb: 255, 255, 255;
     --active-rgb: 233, 254, 98;
     --background-shadow: 0, 0, 0;
+    --border-color:  255, 255, 255;
+    --button-text: 5, 18, 44;
   }
 }
 
@@ -24,20 +28,13 @@ body {
 }
 
 
+
   nav {
     color: rgb(var(--text-rgb));
     background: rgb(var(--foreground-rgb));
     box-shadow: 0 15px 35px rgb(var(--background-shadow));
   }
 
-
-@media (max-width: 1199px) {
-  nav {
-    color: rgb(var(--text-rgb));
-    background: rgb(var(--foreground-rgb));
-    box-shadow: 0 15px 35px rgb(var(--background-shadow));
-  }
-}
 
 nav a label {
   background: #E9FE62;
@@ -47,18 +44,27 @@ nav a:hover i, nav a:active i{
   color: rgb(var(--active-rgb));
 }
 
+nav .fa-moon {
+  color: rgb(var(--button-text));
+}
 
 .bg-blue {
   background: rgb(var(--foreground-rgb));
 }
 
 .text-blue {
-  color: rgb(var(--foreground-rgb));
+  color: #05122C;
 }
 
 .border-blue {
   border: solid 1px #05122C;
 }
+
+.bg-border {
+  background: rgb(var(--border-color));
+}
+
+
 
 .bg-active {
   background: rgb(var(--active-rgb));
