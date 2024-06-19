@@ -3,25 +3,69 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: rgba(255, 255, 255, 1);
-  --text-color: rgba(5, 18, 44, 1);
+  --foreground-rgb: 255, 255, 255;
+  --text-rgb: 5, 18, 44;
+  --active-rgb: 93, 39, 218;
+  --background-shadow: 93, 39, 218, 0.5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: rgba(5, 18, 44, 1);
-    --text-color: rgba(255, 255, 255, 1);
+    --foreground-rgb: 5, 18, 44;
+    --text-rgb: 255, 255, 255;
+    --active-rgb: 233, 254, 98;
+    --background-shadow: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--text-color));
+  color: rgb(var(--text-rgb));
   background: rgb(var(--foreground-rgb));
 }
 
-nav {
-  color: rgb(var(--text-color));
+
+  nav {
+    color: rgb(var(--text-rgb));
+    background: rgb(var(--foreground-rgb));
+    box-shadow: 0 15px 35px rgb(var(--background-shadow));
+  }
+
+
+@media (max-width: 1199px) {
+  nav {
+    color: rgb(var(--text-rgb));
+    background: rgb(var(--foreground-rgb));
+    box-shadow: 0 15px 35px rgb(var(--background-shadow));
+  }
+}
+
+nav a label {
+  background: #E9FE62;
+}
+
+nav a:hover i, nav a:active i{
+  color: rgb(var(--active-rgb));
+}
+
+
+.bg-blue {
   background: rgb(var(--foreground-rgb));
+}
+
+.text-blue {
+  color: rgb(var(--foreground-rgb));
+}
+
+.border-blue {
+  border: solid 1px #05122C;
+}
+
+.bg-active {
+  background: rgb(var(--active-rgb));
+}
+
+.text-active {
+  color: rgb(var(--active-rgb));
 }
 
 @layer utilities {

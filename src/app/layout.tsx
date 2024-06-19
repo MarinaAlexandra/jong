@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./styles/globals.css";
-import "./compontents/Navigation";
-import Navigation from "@/app/compontents/Navigation";
+import MobileNavigation from "@/app/components/MobileNavigation";
+import Navigation from "@/app/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="nl">
+        <head>
+            <script src="https://kit.fontawesome.com/3745fcc90b.js" crossOrigin="anonymous"></script>
+        </head>
+      <body className={inter.className}>
       <Navigation/>
-      <body className={inter.className}>{children}</body>
+      <MobileNavigation/>
+      {children}
+      </body>
     </html>
   );
 }
