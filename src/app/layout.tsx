@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./styles/globals.css";
+import "@/styles/globals.css";
 import MobileNavigation from "@/app/components/MobileNavigation";
 import Navigation from "@/app/components/Navigation";
 
@@ -21,7 +21,9 @@ export default function RootLayout({
         <head>
             <script src="https://kit.fontawesome.com/3745fcc90b.js" crossOrigin="anonymous"></script>
         </head>
+
       <body className={inter.className}>
+
       <Navigation/>
       <MobileNavigation/>
       {children}

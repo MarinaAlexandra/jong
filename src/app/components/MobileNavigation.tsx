@@ -3,7 +3,7 @@ import React from 'react';
 const MobileNavigation = () => {
 
     return (
-        <nav className="fixed bottom-0 left-[50%] translate-x-[-50%] w-full z-[999] pt-[24px] pb-[9px] lg:hidden md:block">
+        <nav className="mobile fixed bottom-0 left-[50%] translate-x-[-50%] w-full z-[999] pt-[24px] pb-[9px] lg:hidden md:block">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-5">
                     <a className="flex flex-col justify-center align-center" href="">

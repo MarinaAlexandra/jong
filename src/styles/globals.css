@@ -8,6 +8,7 @@
   --active-rgb: 93, 39, 218;
   --background-shadow: 93, 39, 218, 0.5;
   --border-color:  5, 18, 44;
+  --button-color:  255, 255, 255;
   --button-text: 255, 255, 255;
 }
 
@@ -18,6 +19,7 @@
     --active-rgb: 233, 254, 98;
     --background-shadow: 0, 0, 0;
     --border-color:  255, 255, 255;
+    --button-color:  255, 255, 255;
     --button-text: 5, 18, 44;
   }
 }
@@ -64,14 +66,24 @@ nav .fa-moon {
   background: rgb(var(--border-color));
 }
 
-
-
 .bg-active {
   background: rgb(var(--active-rgb));
 }
 
 .text-active {
   color: rgb(var(--active-rgb));
+}
+
+.bg-lilac {
+  background: #8A71A8;
+}
+
+.btn-primary {
+  background: #E9FE62;
+  color: #05122C;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: 700;
 }
 
 @layer utilities {
