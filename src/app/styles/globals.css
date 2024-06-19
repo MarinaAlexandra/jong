@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: rgba(255, 255, 255, 1);
+  --text-color: rgba(5, 18, 44, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: rgba(5, 18, 44, 1);
+    --text-color: rgba(255, 255, 255, 1);
+  }
+}
+
+body {
+  color: rgb(var(--text-color));
+  background: rgb(var(--foreground-rgb));
+}
+
+nav {
+  color: rgb(var(--text-color));
+  background: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
